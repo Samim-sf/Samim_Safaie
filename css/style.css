@@ -1,0 +1,102 @@
+body {
+    direction: rtl;
+    margin: 0 10%;
+    margin-top: 2%;
+    min-width:500px ;
+
+}
+
+label {
+    margin-right: 15em;
+
+}
+
+.site_header {
+    height:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightgoldenrodyellow;
+    border-radius: 10px;
+}
+main{
+    margin-top:10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 2em;
+}
+#site-title{
+    flex-grow: 1;
+    margin-right:1em !important;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+#site-title:hover{
+    cursor: pointer;
+}
+#search_div{
+    display: flex;
+    flex-grow: 2;
+    justify-content: flex-end;
+}
+input[type=search] {
+    max-height: 35%;
+    max-width:100%;
+    margin: 0 2em 0 2em;
+}
+img {
+    border-radius: 10px;
+    max-width:57%;
+    max-height:300px;
+    min-height:5%;
+}
+
+
+.content_image_text{
+    display: flex;
+    margin: 2rem 1rem;
+    justify-content:space-around;
+    align-items: stretch;
+}
+.main-menu{
+    display: flex;
+    justify-content:space-around;
+    background-color: black;
+    margin-top:10px;
+    border-radius: 10px;
+    color:white;
+}
+
+.main-menu>span:hover{
+    cursor: pointer;
+    color:lightgreen;
+}
+/*style="max-width:40%;display: inline-block"
+style="max-width:57% ; display: inline-block; float: left"
+style="clear: both"
+
+
+*/
+@media only screen and (max-width: 575px) {
+    body{
+        font-min-size:2.5vw;
+
+    }
+
+}
+
+@media only screen and (min-width: 576px )and (max-width: 992px) {
+    body{
+        font-size:2vw;
+    }
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+    body{
+        font-size:1.5vw;
+    }
+
+
+}
