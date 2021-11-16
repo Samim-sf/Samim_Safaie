@@ -42,6 +42,6 @@ function changeMode() {
     if ((window.getComputedStyle(document.body, "").getPropertyValue("background-color").toString()).includes("0")){
         document.getElementById("change-mode").className="fa fa-sun";
     }else{
-        document.getElementById("change-mode").style.className="fa fa-moon";
+        document.getElementById("change-mode").className="fa fa-moon";
     }
 }
