@@ -22,7 +22,7 @@ function childNodes(node) {
         if (allEl[i].hasChildNodes()) {
             childNodes(allEl[i]);
         } else {
-            changeMode1(allEl[i]);
+           // changeMode1(allEl[i]);
         }
     }
 }
@@ -39,9 +39,11 @@ function changeMode1(element) {
 function changeMode() {
     changeMode1(document.body);
     childNodes(document.body);
-    if ((window.getComputedStyle(document.body, "").getPropertyValue("background-color").toString()).includes("0")){
-        document.getElementById("change-mode").className="fa fa-sun";
-    }else{
-        document.getElementById("change-mode").className="fa fa-moon";
+    if ((window.getComputedStyle(document.body, "").getPropertyValue("background-color").toString()).includes("0")) {
+        document.getElementById("change-mode").className = "fa fa-sun";
+        document.getElementsByClassName("main-container")[0].style.border = "1px solid white";
+    } else {
+        document.getElementById("change-mode").className = "fa fa-moon";
+        document.getElementsByClassName("main-container")[0].style.border = "1px solid black";
     }
 }
