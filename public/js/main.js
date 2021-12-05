@@ -22,7 +22,7 @@ function childNodes(node) {
         if (allEl[i].hasChildNodes()) {
             childNodes(allEl[i]);
         } else {
-           // changeMode1(allEl[i]);
+            // changeMode1(allEl[i]);
         }
     }
 }
@@ -47,3 +47,31 @@ function changeMode() {
         document.getElementsByClassName("main-container")[0].style.border = "1px solid black";
     }
 }
+
+$(document).ready(function () {
+    $("#first-image").click(function () {
+        let currentImage = $('#first-image')[0];
+        let images = new Array(3);
+        for (let i = 0; i < images.length; i++) {
+            images[i] = new Image();
+\
+        }
+        images[0].src = 'public/images/hafezieh.jpg';
+        images[1].src = 'public/images/Shiraz1.jpg';
+        images[2].src = 'public/images/Shiraz2.jpg';
+        for (let i = 0; i < images.length; i++) {
+            console.log(currentImage.src.includes(images[i].src));
+            if (currentImage.src.includes(images[i].src)) {
+                let index = (i + 1) % 3;
+                $(this).fadeOut(1000);
+                console.log(currentImage.src);
+                currentImage = images[index];
+                setTimeout(function () {
+                    $('#first-image').attr("src", currentImage.src);
+                }, 1000);
+                $(this).fadeIn(1000);
+                break;
+            }
+        }
+    });
+});
