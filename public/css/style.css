@@ -62,14 +62,19 @@ input[type=search] {
     margin: 0 2em 0 2em;
 }
 
-img {
+#second-img {
     border-radius: 10px;
-    max-width: 57%;
+    width: 57%;
     max-height: 300px;
     min-height: 5%;
 }
 
+#first-image{
+    border-radius: 10px;
+    width:40% !important;
+    margin-right:15px;
 
+}
 .content_image_text {
     display: flex;
     margin: 2rem 1rem;

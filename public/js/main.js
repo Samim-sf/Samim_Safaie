@@ -54,7 +54,6 @@ $(document).ready(function () {
         let images = new Array(3);
         for (let i = 0; i < images.length; i++) {
             images[i] = new Image();
-\
         }
         images[0].src = 'public/images/hafezieh.jpg';
         images[1].src = 'public/images/Shiraz1.jpg';
