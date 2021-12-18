@@ -399,9 +399,24 @@
     </div>
 
 </footer>
+<table style="border: 1px solid black; border-collapse: collapse; width: 100%;">
+    <?php for ($i = 0; $i < 9; $i++) { ?>
+        <tr style="border: 1px solid black" >
+            <?php for ($j = 0; $j < 9; $j++) { ?>
+                <td style="border: 1px solid black">hello</td>
+            <?php } ?>
+        </tr>
 
+    <?php } ?>
+</table
 
 
 
 </body>
 </html>
+>
+
+
+
+
+
