@@ -1,5 +1,5 @@
 <?php
-
+error_reporting(0);
 $userInput = $_POST['user-input'];
 
 if (isset($userInput)) {
@@ -17,7 +17,7 @@ if (isset($userInput)) {
         $valid = false;
     } else {
         // check validation input
-        for ($i = 0; $i <= 2; $i = $i + 2) {
+        for ($i = 0; $i <= count($splitedInput); $i = $i + 2) {
             if (is_numeric($splitedInput[$i]) != 1) {
                 echo "<span>You should enter valid equation like
                 (2*5+3/4)(Your entered characters in your equation or put more than one operator between two numbers ) 
@@ -31,7 +31,6 @@ if (isset($userInput)) {
             echo "<span>Your answer is : </span>";
             eval("\$userInput = ".$userInput.";");
             echo $userInput;
-//            echo eval($userInput.";");
 
             echo " <br>
                 <span>
